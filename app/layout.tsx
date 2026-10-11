@@ -7,7 +7,20 @@ export const metadata: Metadata = {
   description: 'A calm, offline-first expense tracker for recording purchases, spotting patterns, and keeping your financial data close.',
   generator: 'v0.app',
   icons: {
-    icon: '/icon.svg',
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
     apple: '/apple-icon.png',
   },
 }
