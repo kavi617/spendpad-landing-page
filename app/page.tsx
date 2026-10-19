@@ -124,6 +124,24 @@ export default function Page() {
         <InteractivePhone />
       </section>
 
+      <section id="commercial" className="reveal-section border-y border-[#e1e9df] bg-white/60">
+        <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.18em] text-[#267548]">See SpendPad in action</p>
+          <div className="mt-5 sm:mt-6">
+            <div className="commercial-video-wrap">
+              <video
+                className="commercial-video"
+                src="/assets/Spend-pad-comercial.mp4"
+                controls
+                playsInline
+                preload="none"
+                aria-label="SpendPad commercial video"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="features" className="reveal-section border-y border-[#e1e9df] bg-white/60"><div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28"><div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#267548]">A simpler way to stay aware</p><h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Less bookkeeping. More clarity.</h2></div><div className="stagger-grid mt-14 grid gap-5 md:grid-cols-3">{features.map(({ icon: Icon, eyebrow, title, copy }) => <article key={title} className="rounded-3xl border border-[#dce7dc] bg-[#fbfcf9] p-7"><div className="flex size-12 items-center justify-center rounded-2xl bg-[#dff2e1] text-[#267548]"><Icon aria-hidden="true" className="size-6" /></div><p className="mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-[#7b887d]">{eyebrow}</p><h3 className="mt-3 text-2xl font-semibold tracking-[-0.03em]">{title}</h3><p className="mt-3 leading-7 text-[#657267]">{copy}</p></article>)}</div><div className="mt-5 grid gap-5 rounded-3xl bg-[#173b27] p-7 text-white md:grid-cols-[1fr_auto] md:items-center md:p-10"><div><div className="flex items-center gap-3"><ArchiveRestore className="size-5 text-[#a9e9b4]" /><p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#a9e9b4]">Backup without the cloud</p></div><h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">Bring your data with you.</h3><p className="mt-3 max-w-2xl leading-7 text-[#c1d8c4]">Export your expenses as a JSON backup whenever you choose, then restore it later from Settings. No automatic cloud backup—just a file you control.</p></div><ShieldCheck aria-hidden="true" className="hidden size-20 text-[#5fbd78]/50 md:block" /></div></div></section>
 
       <section id="screenshots" className="reveal-section mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28">

@@ -285,15 +285,48 @@
   @media (max-width: 360px) { .interactive-phone-wrap { min-height: 600px; } .interactive-phone { width: 276px; height: 570px; } }
   @media (prefers-reduced-motion: reduce) { .site-loader-card, .loader-wallet, .site-loader-progress i { animation: none; } }
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
+  .commercial-video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: #0f1f17;
+    box-shadow: 0 24px 48px -20px rgba(23, 59, 39, 0.5);
+    aspect-ratio: 16 / 9;
+  }
 
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+  .commercial-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: #000;
+  }
+
+  .commercial-video::-webkit-media-controls-play-button {
+    filter: brightness(0) invert(1);
+  }
+
+  @media (max-width: 768px) {
+    .commercial-video-wrap {
+      max-width: 100%;
+      border-radius: 1.1rem;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .commercial-video-wrap {
+      border-radius: 0.9rem;
+      box-shadow: 0 14px 28px -14px rgba(23, 59, 39, 0.5);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .commercial-video-wrap {
+      box-shadow: none;
     }
   }
 }
